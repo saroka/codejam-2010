@@ -19,7 +19,7 @@ describe Snapper do
   describe 'calculating snapper chain' do
     let(:snapper) { Snapper.new('spec/testcase.in') }
 
-    [[1,0,false], [1,1,true], [4,0,false], [4,47,true]].each do |n, k, expected|
+    [[1,0,false], [1,1,true], [4,0,false], [4,47,true], [2,3,true]].each do |n, k, expected|
       it "should return the final state of the chain for n = #{n} and k = #{k}" do
         snapper.light(n,k).should == expected
       end
