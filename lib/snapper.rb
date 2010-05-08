@@ -31,7 +31,7 @@ class Snapper
     if i == 1
       j % 2 != 0
     else
-      power(i,j) && state(i,j)
+      j > 0 ? power(i,j) && state(i,j) : false
     end
   end
 
