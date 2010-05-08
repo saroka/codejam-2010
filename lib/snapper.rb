@@ -28,7 +28,11 @@ class Snapper
   end
   
   def light(i,j)
-    state(i,j) && power(i,j)
+    if i == 1
+      j % 2 != 0
+    else
+      power(i,j) && state(i,j)
+    end
   end
 
   def state(i,j)
