@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.push File.join(File.dirname(__FILE__), "/../lib" )
+require 'snapper'
+
+if ARGV[0].nil?
+  puts "Invalid argument"
+  puts "Use: ./snapper <input_file_name>"
+else
+  s = Snapper.new ARGV[0]
+  puts s.solve
+end
