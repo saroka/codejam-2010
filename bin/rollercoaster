@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.push File.join(File.dirname(__FILE__), "/../lib" )
+require 'roller_coaster'
+
+if ARGV[0].nil?
+  puts "Invalid argument"
+  puts "Use: ./snapper <input_file_name>"
+else
+  roller = RollerCoaster.new ARGV[0]
+  puts roller.output
+end
